@@ -1,11 +1,23 @@
-<script setup>
+<script>
+import HeaderVue from "./components/Header.vue";
+import LoginVue from "./components/Login.vue";
 
+export default {
+  name: "App",
+  components: {
+    HeaderVue,
+    LoginVue,
+  },
+};
 </script>
 
 <template>
-  <h1>Welcome to Groupomania</h1>
+  <div>
+    <HeaderVue />
+    <router-view></router-view>
+
+    <h1>Welcome to Groupomania :)</h1>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style></style>
